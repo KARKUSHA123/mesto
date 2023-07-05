@@ -11,6 +11,7 @@
     justify-self: end;
     margin-top: 75px;
     border-radius: 2px;
+    padding: 0px;
 }
 
 .profile__button-add:hover {
