@@ -61,13 +61,14 @@ function createCard(name, link) {
   deleteButton.addEventListener('click', deleteButtonClick);
     
 
+  
   cardImage.addEventListener("click", function () {
     openPhotoWindow(popupPhoto);
     bigImage.src = cardImage.src;
     bigImageHeading.textContent = cardHeadind.textContent;
   });
 
-
+ 
 
   const likeElements = cardElement.querySelector('.elements__like');
   likeElements.addEventListener('click', function (like) {
@@ -91,7 +92,6 @@ function deleteButtonClick(event) {
   const card = button.closest('.elements__element');
   card.remove();
 }
-
 
 
 
