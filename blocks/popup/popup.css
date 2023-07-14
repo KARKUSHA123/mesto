@@ -1,16 +1,15 @@
-.popup {
-    width: 100%;
-    min-height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    box-sizing: border-box;
-    position: fixed;
-    top: 0px;
-    left: 0;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.8s ease 0s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+.popup { 
+    width: 100%; 
+    min-height: 100%; 
+    background-color: rgba(0,0,0,0.5); 
+    position: fixed; 
+    top: 0px; 
+    visibility: hidden; 
+    opacity: 0; 
+    transition: 0.3s linear; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+} 
+
 
