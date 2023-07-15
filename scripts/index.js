@@ -1,7 +1,7 @@
 const popupEditProfile = document.querySelector('.popup_type_profile');
 const buttonOpenEditProfilePopup = document.querySelector('.profile__button-edit');
 const buttonsClosePopup = document.querySelectorAll('.popup__button-close');
-const popupForm = document.querySelector('.popup__form');
+const popupFormProfile = document.querySelector('.popup__form_profile');
 const nameInput = document.querySelector('.popup__input_type_name');
 const jobInput = document.querySelector('.popup__input_type_about');
 const profileName = document.querySelector('.profile__title');
@@ -31,9 +31,6 @@ function openProfileWindow() {
   jobInput.value = profileAbout.textContent;
 }
 
-function openPhotoWindow() {
-  popupPhoto.classList.add('popup_opened');
-}
 
 function handleFormSubmitProfile (evt) {
   evt.preventDefault(); 
@@ -62,15 +59,15 @@ function createCard(name, link) {
     
 
   cardImage.addEventListener("click", function () {
-    openPhotoWindow(popupPhoto);
+    openPopup(popupPhoto);
     bigImage.src = cardImage.src;
     bigImage.alt = cardHeadind.textContent;
     bigImageHeading.textContent = cardHeadind.textContent;
   });
 
   
-  const likeElements = cardElement.querySelector('.elements__like');
-  likeElements.addEventListener('click', function (like) {
+  const likeElement = cardElement.querySelector('.elements__like');
+  likeElement.addEventListener('click', function (like) {
     like.target.classList.toggle('elements__like_active');
   });
   
