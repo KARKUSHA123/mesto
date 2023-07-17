@@ -102,5 +102,5 @@ buttonsClosePopup.forEach(function(event) {
   });
 });
 
-popupForm.addEventListener('submit', handleFormSubmitProfile);
+popupFormProfile.addEventListener('submit', handleFormSubmitProfile);
 formPlacesElement.addEventListener('submit', handleFormSubmitPhoto);
