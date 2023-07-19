@@ -16,15 +16,25 @@ const bigImage = document.querySelector('.popup__image');
 const bigImageHeading = document.querySelector('.popup__photo-about');
 const elementsContainer = document.querySelector('.elements');
 const newCardTemplate = document.querySelector('#elements-template').content;
+const popupsAll = document.querySelectorAll('.popup');
+const disabledButton = popupEditPlace.querySelector('.popup__button');
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  document.addEventListener('keydown', closePopupByEsc);
 }
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
+  document.addEventListener('keydown', closePopupByEsc);
 }
 
+function closePopupByEsc(esc) {
+  if (esc.key === 'Escape') {
+    const popupOpened = document.querySelector('.popup_opened');
+    closePopup(popupOpened);
+  }
+}
 function openProfileWindow() {
   openPopup(popupEditProfile);
   nameInput.value = profileName.textContent;
@@ -44,7 +54,12 @@ function handleFormSubmitPhoto (evt) {
   addCard(placeInput.value, srcInput.value);
   closePopup(popupEditPlace);
   evt.target.reset();
-}
+
+const disabledButton = popupEditPlace.querySelector('.popup__button');
+if (placeInput.value === '' || srcInput.value === '') {
+  disabledButton.classList.add('popup__button_disabled');
+};
+};
 
 function createCard(name, link) {
   const cardElement = newCardTemplate.querySelector('.elements__element').cloneNode(true);
