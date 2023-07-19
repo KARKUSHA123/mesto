@@ -117,5 +117,13 @@ buttonsClosePopup.forEach(function(event) {
   });
 });
 
+popupsAll.forEach(function(close) {
+  close.addEventListener('mousedown', function(event) {
+    if (event.target.classList.contains('popup_opened')) {
+      closePopup(close);
+    }
+  })
+})
+
 popupFormProfile.addEventListener('submit', handleFormSubmitProfile);
 formPlacesElement.addEventListener('submit', handleFormSubmitPhoto);
