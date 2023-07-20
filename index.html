@@ -8,52 +8,50 @@
     <title>Сервис Mesto</title>
   </head>
 
-  <body>
-    <div class="page">
-      <header class="header">
-        <img class="header__logo" src="./images/Logo.svg" alt="Место" />
-      </header>
+  <body class="page">
+    <header class="header">
+      <img class="header__logo" src="./images/Logo.svg" alt="Место" />
+    </header>
 
-      <main class="content">
-        <section class="profile">
-          <div class="profile__container">
-            <img
-              class="profile__image"
-              alt="Аватар"
-              src="./images/profile__image.jpg"
-            />
-            <div class="profile__info">
-              <div class="profile__change">
+    <main class="content">
+      <section class="profile">
+        <div class="profile__container">
+          <img
+            class="profile__image"
+            alt="Аватар"
+            src="./images/profile__image.jpg"
+          />
+          <div class="profile__info">
+            <div class="profile__change">
                 <h1 class="profile__title">Жак-Ив Кусто</h1>
-                <button
-                  type="button"
-                  class="button profile__button-edit"
+              <button
+                type="button"
+                class="button profile__button-edit"
                   aria-label="Редактировать профиль"
-                ></button>
-              </div>
+              ></button>
+            </div>
               <p class="profile__subtitle">Исследователь океана</p>
-            </div>
           </div>
-          <button type="button" class="button profile__button-add"></button>
-        </section>
+        </div>
+        <button type="button" class="button profile__button-add"></button>
+      </section>
 
-        <section class="elements">
-          <template id="elements-template">
-            <div class="elements__element">
-              <img class="elements__image" alt="Фото" src="#" />
-              <div class="elements__info">
-                <h2 class="elements__name"></h2>
-                <button type="button" class="elements__like"></button>
-              </div>
-              <button type="button" class="elements__delete"></button>
+      <section class="elements">
+        <template id="elements-template">
+          <div class="elements__element">
+            <img class="elements__image" alt="Фото" src="#" />
+            <div class="elements__info">
+              <h2 class="elements__name"></h2>
+              <button type="button" class="elements__like"></button>
             </div>
-          </template>
-        </section>
-      </main>
-      <footer class="footer">
-        <p class="footer__text">&copy; 2023 Mesto Russia</p>
-      </footer>
-    </div>
+            <button type="button" class="elements__delete"></button>
+          </div>
+        </template>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">&copy; 2023 Mesto Russia</p>
+    </footer>
 
     <div class="popup popup_type_profile">
       <div class="popup__container">
@@ -71,7 +69,6 @@
             maxlength="40"
             required
           />
-
           <span class="input-name-error">Вы пропустили это поле</span>
           <input
             type="text"
@@ -114,6 +111,7 @@
           <input
             type="url"
             name="popup-src"
+            id="input-src"
             class="popup__input popup__input_type_src"
             placeholder="Ссылка на картинку"
             value=""
