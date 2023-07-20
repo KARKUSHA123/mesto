@@ -59,17 +59,20 @@
       <div class="popup__container">
         <button type="button" class="popup__button-close"></button>
         <h2 class="popup__text">Редактировать профиль</h2>
-        <form class="popup__form" name="popup-form" novalidate>
-        <form class="popup__form popup__form_profile" name="popup-form-profile">
+        <form class="popup__form popup__form_profile" name="popup-form-profile" novalidate>
           <input
             type="text"
             name="popup-name"
             id="input-name"
             class="popup__input popup__input_type_name"
             placeholder="Имя пользователя"
-            minlength="2" maxlength="40" required>
-            <span class="input-name-error">Вы пропустили это поле</span>
+            value="name"
+            minlength="2"
+            maxlength="40"
+            required
           />
+
+          <span class="input-name-error">Вы пропустили это поле</span>
           <input
             type="text"
             name="popup-text"
@@ -91,7 +94,11 @@
       <div class="popup__container">
         <button type="button" class="popup__button-close"></button>
         <h2 class="popup__text popup__text_places">Новое место</h2>
-        <form class="popup__form popup__form_places" name="popup-places" novalidate>
+        <form
+          class="popup__form popup__form_places"
+          name="popup-places"
+          novalidate
+        >
           <input
             type="text"
             name="popup-place"
@@ -129,7 +136,6 @@
     </div>
     <script src="./scripts/constants.js"></script>
     <script src="./scripts/index.js"></script>
-    <script src="./scripts/validate.js"></script> 
+    <script src="./scripts/validate.js"></script>
   </body>
 </html>
->

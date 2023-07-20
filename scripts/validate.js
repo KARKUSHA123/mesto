@@ -65,7 +65,7 @@ const enableValidation = (events) => {
 };
 
 enableValidation({
-  formSelector: '.popup__form',
+  formSelector: '.popup__form_profile',
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__button',
   inactiveButtonClass: 'popup__button_disabled',
