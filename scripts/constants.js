@@ -24,3 +24,13 @@ const initialCards = [
     link: 'https://sun9-33.userapi.com/impg/Nv895DbCIfUr3hioL5DPoHqheYT6LG_9BK0HKQ/RD1aHxTVGmQ.jpg?size=1620x2160&quality=96&sign=a98b6b027561ea6293ae50a2e78dd363&type=album'
   }
 ]; 
+const configValidation = {
+  formSelector: '.popup__form',
+  inputSelector: '.popup__input',
+  submitButtonSelector: '.popup__button',
+  inactiveButtonClass: 'popup__button_disabled',
+  inputErrorClass: 'popup__input-error',
+  errorClass: 'popup__input-error_active'
+};
+
+export {configValidation, initialCards}
