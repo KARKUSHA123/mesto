@@ -31,7 +31,7 @@ function openPopup(popup) {
 
 function closePopup(popup) {
   popup.classList.remove("popup_opened");
-  document.addEventListener("keydown", closePopupByEsc);
+  document.removeEventListener("keydown", closePopupByEsc);
 }
 
 function closePopupByEsc(esc) {
@@ -69,6 +69,12 @@ for (let i = 0; i < initialCards.length; i++) {
   addCard(initialCards[i], '#elements-template');
 }
 
+function createCard(initialCards, templateSelector) {
+  const cardElement = new Card(initialCards, templateSelector);
+  const cardTemplate = cardElement.generateCard();
+  return cardTemplate;
+}
+
 function addCard(initialCards, templateSelector) {
   const cardElement = new Card(initialCards, templateSelector);
   elementsContainer.prepend(cardElement.generateCard());
@@ -77,6 +83,7 @@ function addCard(initialCards, templateSelector) {
 buttonOpenEditProfilePopup.addEventListener('click', openProfileWindow);
 buttonOpenAddCardPopup.addEventListener('click', function() {
   openPopup(popupEditPlace);
+placeWindowValidationReset.resetValidation();
 });
 
 buttonsClosePopup.forEach(function(event) {
